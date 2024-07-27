@@ -21,7 +21,7 @@ main{
     width: 60%;
     height: 100px;
     height: 100%;
-    background-image: url("/Ascent_Map_Valorant_Banner.jpeg");
+    background-image: url("./Ascent_Map_Valorant_Banner.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
