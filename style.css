@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     width: 100dvw;
     height: 100dvh;
@@ -19,7 +23,6 @@ main{
 .sec1{
     position: relative;
     width: 60%;
-    height: 100px;
     height: 100%;
     background-image: url("./Ascent_Map_Valorant_Banner.jpeg");
     background-repeat: no-repeat;
@@ -28,12 +31,6 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.sec2{
-    width: 40%;
-    height: 100px;
-    height: 100%;
 }
 
 .sec1 > img{
@@ -48,9 +45,163 @@ main{
     text-align: center;
 }
 
+.sec1 > div > a{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20px;
+    border: unset;
+    font-weight: bold;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+    animation: ani 3s infinite;
+    color: #4c4c4c;
+}
+
 .sec1 > div > img{
     margin: 120px 0 10px 0;
     width: 350px;
     height: 180px;
     object-fit: cover;
+    box-shadow: 0 0 10px #000;
+    border-radius: 2px;
+}
+
+.sec2{
+    width: 40%;
+    height: 100px;
+    height: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2 > div{
+    text-align: center;
+}
+
+.sec2 > div > h1{
+    font-size: 35px;
+}
+
+.sec2 > div > p{
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.sec2 > div > form{
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec2 > div > form > input{
+    height: 35px;
+    background-color: #f7f7f7;
+    margin-top: 10px;
+    border: unset;
+    padding-left: 10px;
+}
+.sec2 > div > form > input:focus{
+    outline: unset;
+}
+
+.sec2 > div > form > button{
+    margin: 20px auto;
+    width: 200px;
+    padding: 0.3rem 0;
+    border: unset;
+    border-radius: 20px;
+}
+
+@keyframes ani {
+    0%{
+        transform: translate(-50%,0);
+    }
+    50%{
+        transform: translate(-50%,5px);
+    }
+    100%{
+        transform: translate(-50%,0);
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .sec1{
+        width: 50%;
+    }
+
+    .sec2{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body{
+        height: auto !important;
+        width: 100%;
+    }
+
+    main{
+        height: auto !important;
+        flex-direction: column;
+    }
+
+    .sec1{
+        height: 100dvh !important;
+        width: 100%;
+    }
+
+    .sec1 > div > a{
+        display: block;
+    }
+
+    .sec2{
+        width: 100%;
+    }
+
+    .sec2 > div{
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sec2{
+        padding: 0;
+    }
+
+    .sec2 > div > form{
+        width: auto;
+        align-items: center;
+    }
+
+    .sec2 > div > form > input{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .sec1 > div > img{
+        width: 320px !important;
+    }
+
+    .sec2 > div > form{
+        width: auto;
+        align-items: center;
+    }
+
+    .sec2 > div > form > input{
+        width: 350px;
+    }
+
+    .sec2 > div > form > input{
+        width: 320px;
+    }
 }
